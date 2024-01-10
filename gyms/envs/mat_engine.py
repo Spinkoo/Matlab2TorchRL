@@ -10,7 +10,7 @@ import time
 
 
 #a second
-step_size = 1
+STEP_SIZE = 1
 
 
 #Matlab wrapper
@@ -25,28 +25,36 @@ class Engine:
         self.sim_type = simulation_type
         self.step_fn = self.init_steps_dict()
     
-
+    # Initialize the dictionary of step functions
     def init_steps_dict(self) -> dict:
         return {'sbs' : self.step_by_step, 'sparsesbs' : self.sparsesbs, 'normal' : self.f}
     
+    # Step by step simulation
     def step_by_step(self):
         self.set_param(f'{self.model_name}/{self.matlab_stepper}', str(9999))
         self.start_pause_simulation()
+
+    # Sparse Step by step simulation, the idea is to skip certain number of steps if they are superfluous 
+
     def sparsesbs(self):
         self.timestep_forward()
     
+    # Run a .m file on matlab
     def run_engine_script(self, script_name : str):
         f = getattr(self.eng, script_name)
         f(nargout = 0)
     def f(self):
         pass
+    
 
     def step_forward(self):
         self.step_fn[self.sim_type]()
 
+    #Access a folder
     def cd_folder(self, path):
         self.eng.cd(f'{path}', nargout = 0)
 
+    # Load the Python-Matlab engine
     def load_engine(self) -> None:
 
         self.eng = matlab.engine.start_matlab()
@@ -60,10 +68,11 @@ class Engine:
     def set_simulation_mode(self, s_mode : str = 'accelerator') -> None:
         self.eng.set_param(self.model, 'SimulationMode', s_mode, nargout = 0)
     
+    # Set maximum steps for the simulation, sort of timeout
     def set_max_steps(self, max_iter : int, max_iter_block = 'max_sim_time') -> None:
         self.set_param(f'{max_iter_block}', str(max_iter), )
 
-    """An assertion block needs to be created in order to properly pause the simulation on Matlab, check the readme"""
+    """An assertion block needs to be created in order to properly pause the simulation on Matlab each N steps (check simulink model)"""
     def set_step_size(self, step_sz):
 
         assert self.sim_type == 'sparsesbs', 'Simulation type has to be set to step by step (sbs), an assertion block should set inplace inside the simulation'
@@ -118,13 +127,16 @@ class Engine:
             self.stop_simulation()  
             return -1
     
+    # Get simulation output
 
     def get_simout(self, ws = 'base'):
         return self.get_simulation_last_readings('simout', ws)
-
+    
+    # Get simulation status
     def get_simulation_status(self) -> str:
         return self.get_param("", 'SimulationStatus')
     
+    # Get robot sensors readings
     def get_robots_readings(self, ws = 'base'):
         return np.array(self.get_simulation_last_readings('robot_readings', ws)[0], dtype=np.float16)
     
@@ -133,9 +145,11 @@ class Engine:
         self.eng.workspace['br'] = br
         return self.eng.eval(f"br.data")
     
+    # Get workspace parameter
     def get_ws_value(self, attribute = 'Vitesse', ws = 'base'):
         return self.eng.evalin(ws, attribute)
     
+    # Write to workspace
     def write_ws_value(self, attribute = 'Vitesse', ws = 'base', value = 0) -> None:
         self.eng.assignin(ws, attribute, value, nargout = 0)
     
@@ -144,6 +158,8 @@ class Engine:
 
 
 if __name__ == '__main__':
+
+    #DEBUG Section
     # Start MATLAB engine
     
     SIMULATION_PATH = 'envs/maze/'
@@ -155,7 +171,7 @@ if __name__ == '__main__':
     eng.set_simulation_mode(s_mode='Normal')
 
     if eng.sim_type == 'sparsesbs':
-        eng.set_step_size(step_size)
+        eng.set_step_size(STEP_SIZE)
 
     
     eng.start_simulation()
