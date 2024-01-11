@@ -36,26 +36,21 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
     ----|     Files     |----   
  --------------------------------------
 
-   [setup.m] : Load end initialize all parametres we need for a simulation.
+   ![Load end initialize all parametres we need for a simulation.](./setup.m) : 
 
-   [constante.m] : Contients the main caracteristiques of the robot.
+   ![Contients the main caracteristiques of the robot.](constante.m)
 
-   [thresholding_image] : Scales the pixels values of a picture.
+   ![Scales the pixels values of a picture.](thresholding_image.m)
 
-   [animation] : Creat a figure where the Thymio can move.
+   ![Creat a figure where the Thymio can move.](animation.m)
 
-   [animation_SFunction] : Take and give all parametres from the simulink simulation
-                           to the animation.
+   ![Take and give all parametres from the simulink simulation to the animation.](animation_SFunction.m)
 
-   [Simulation_2_Wall_Follower_v1] : Simulate the a Thymio solving a maze following
-                                     a wall. (It notreally follow a wall)
+   ![Simulate the a Thymio solving a maze following a wall. ](Simulation_2_Wall_Follower_v1.m) : 
 
 
-   [maze_0] : Map where the Thymio have to travel.
+   ![Maps of the maze.](./maze)
 
-   [donn�es_maze_0] : Contients the start position of the Thymio.
-
-   [.\maze] : Contients all maps and positions for a simulation.
 
  
  ----------------------------------
