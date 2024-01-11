@@ -28,7 +28,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
     ----|     Simulink model     |----   
  --------------------------------------
 
- ![Architecture of the simulation](./Overall_arch.png)
+ ![Architecture of the simulation](./Overall_arch.PNG)
 
 
 
