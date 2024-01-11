@@ -21,6 +21,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
  -------------------------------------
 
    1 - Run setup.m
+
    2 - Run Simulation_2_Wall_Follower_v1.slx
 
 
@@ -36,7 +37,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
     ----|     Files     |----   
  --------------------------------------
 
-   ![Load end initialize all parametres we need for a simulation.](./setup.m) : 
+   ![Load end initialize all parametres we need for a simulation.](./setup.m) 
 
    ![Contients the main caracteristiques of the robot.](constante.m)
 
@@ -46,7 +47,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
 
    ![Take and give all parametres from the simulink simulation to the animation.](animation_SFunction.m)
 
-   ![Simulate the a Thymio solving a maze following a wall. ](Simulation_2_Wall_Follower_v1.m) : 
+   ![Simulate the a Thymio solving a maze following a wall. ](Simulation_2_Wall_Follower_v1.m)
 
 
    ![Maps of the maze.](./maze)
@@ -73,12 +74,15 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
 Made by students of Aix-Marseille University
 
 BAMOUDOU Nassouif - issa.nassouif@gmail.com
+
 ATIAS Sophian - triedge558@gmail.com
+
 CHARPENTIER Jonathan - j.the-foam@hotmail.com
 
 Modified by Wail HARROUZ
 
 created  : 06 Feb 2018
+
 modified : 10 OCt 2023
 
 
