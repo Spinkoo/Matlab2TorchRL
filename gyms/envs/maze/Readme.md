@@ -47,7 +47,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
    [Simulate the a Thymio solving a maze following a wall. ](Simulation_2_Wall_Follower_v1.m)
 
 
-   ![Maps of the maze.](./maze)
+   [Maps of the maze.](./maze)
 
 
  
