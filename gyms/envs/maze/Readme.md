@@ -10,7 +10,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
     ----|    Prerequisites    |----   
  -------------------------------------
 
-   Matlab and Simulink - > 2015a
+   Matlab and Simulink > 2015a
 
 
  -------------------------------------
