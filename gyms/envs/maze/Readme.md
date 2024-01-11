@@ -1,7 +1,8 @@
+ <p align="center">
  --------------------------------------------------------------------------
     ----------------------|    A Thymio in a maze    |----------------------   
  --------------------------------------------------------------------------
-
+</p>
 This is the Readme for a simulation of a Thymio runing through and solving mazes,   implemented in Matlab's Simulink.
 
 
