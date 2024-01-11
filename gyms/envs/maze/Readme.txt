@@ -13,7 +13,7 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
     ----|    Prerequisites    |----   
  -------------------------------------
 
-   Matlab and Simulink - 2018a or 2015b or 2015a
+   Matlab and Simulink - > 2015a
 
 
  -------------------------------------
@@ -21,25 +21,15 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
  -------------------------------------
 
    1 - Run setup.m
-   2 - Run simulation_1_Random_Mouse.slx        or
-           Simulation_2_Wall_Follower_v1.slx    or
-           Simulation_2_Wall_Follower_v2.slx    or
-           Simulation_3_Pledge_v1               or
-           Simulation_3_Pledge_v2
+   2 - Run Simulation_2_Wall_Follower_v1.slx
 
 
- -------------------------------------
-    ----|    Record tests    |----   
- -------------------------------------
+ --------------------------------------
+    ----|     Simulink model     |----   
+ --------------------------------------
 
-For record an animation, do the following tasks :
+ ![Architecture of the simulation](./Overall_arch.png)
 
-   1 - In a simulink file, turn on the switch.
-   2 - Run a simulation.
-   3 - For end the record befor the end, turn off the switch, than
-       Stop the simulation.
-   5 - Change the name of the of the "Thymio_in_a_maze.avi" for
-       make sure will be not replace with another simulation record.
 
 
  --------------------------------------
@@ -57,31 +47,13 @@ For record an animation, do the following tasks :
    [animation_SFunction] : Take and give all parametres from the simulink simulation
                            to the animation.
 
-   [Simulation_1_Random_Mouse] : Simulate the a Thymio solving a maze with random
-                                 decisions.
-
    [Simulation_2_Wall_Follower_v1] : Simulate the a Thymio solving a maze following
                                      a wall. (It notreally follow a wall)
-
-   [Simulation_2_Wall_Follower_v2] : Simulate the a Thymio solving a maze following
-                                     a wall. (It can really follow a wall)
-
-   [Simulation_3_Pledge_v1] : Simulate the a Thymio solving a maze with the Pledge
-                              algorithm. (It not really follow a wall)
-
-   [Simulation_3_Pledge_v2] : Simulate the a Thymio solving a maze with the Pledge
-                              algorithm. (It can really follow a wall)
 
 
    [maze_0] : Map where the Thymio have to travel.
 
-   [données_maze_0] : Contients the start position of the Thymio.
-
-
-
-   [.\Simulation_2015a] : Contients all simulations for Matlab 2015a.
-
-   [.\Simulation_2015b] : Contients all simulations for Matlab 2015b.
+   [donnï¿½es_maze_0] : Contients the start position of the Thymio.
 
    [.\maze] : Contients all maps and positions for a simulation.
 
@@ -109,8 +81,10 @@ BAMOUDOU Nassouif - issa.nassouif@gmail.com
 ATIAS Sophian - triedge558@gmail.com
 CHARPENTIER Jonathan - j.the-foam@hotmail.com
 
+Modified by Wail HARROUZ
+
 created  : 06 Feb 2018
-modified : 20 may 2018
+modified : 10 OCt 2023
 
 
  -----------------------------\----------------------------/-----------------------------
