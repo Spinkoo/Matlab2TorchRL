@@ -34,7 +34,7 @@ What things you need to install the software and how to install them:
 
 * [Matlab](https://www.mathworks.com/products/matlab.html)  based on the amazing implementation of [The Pledge Algorithm - Thymio Robot Model on a Maze](https://fr.mathworks.com/matlabcentral/fileexchange/67399-the-pledge-algorithm-thymio-robot-model-on-a-maze)
 * [OpenAI Gym](https://github.com/openai/gym) - The reinforcement learning wrapper
-* [TorchRL and DQN](https://github.com/pytorch/rl) - The deep learning library used
+* [TorchRL and DQN](https://github.com/pytorch/rl) - The deep learning library used, various algorithms can be implemented easily other than DQN that we used
 
 
 

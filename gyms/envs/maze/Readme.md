@@ -2,7 +2,7 @@
   <strong>A Thymio in a maze</strong>
 </p>
 
-This is the Readme for a simulation of a Thymio runing through and solving mazes,   implemented in Matlab's Simulink.
+This is the Readme for a simulation of a Thymio runing through and solving mazes, implemented in Matlab's Simulink.
 
 
 
@@ -29,7 +29,9 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
  ![Architecture of the simulation](./Overall_arch.PNG)
 
 
+The input block is set in the workspace for a smooth and simple modification from the Python engine
 
+The assertion block is necessary to properly run step by step the simulation assuring a fixed step size when interfacing with the engine
  --------------------------------------
     ----|     Files     |----   
  --------------------------------------
