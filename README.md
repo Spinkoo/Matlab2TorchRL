@@ -1,4 +1,4 @@
-# Matlab_PyTorchRL
+# Matlab2PyTorchRL
 
 This project is a pipeline that connects a Matlab simulation (Simulink) to an OpenAI Gym wrapper for PyTorch Reinforcement Learning using the DQN algorithm.
 
