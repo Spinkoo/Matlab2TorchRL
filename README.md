@@ -22,7 +22,9 @@ What things you need to install the software and how to install them:
 
 1. Clone the repo
 2. Navigate to the project directory
-3. Run the main.py script
+3. Install requirements.txt `pip install -r requirements.txt`
+4. [Install Matlab engine for Python](https://fr.mathworks.com/help/matlab/matlab_external/get-started-with-matlab-engine-for-python.html)
+4. Run the main.py script
 
 ## Running the tests
 
