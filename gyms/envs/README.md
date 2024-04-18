@@ -1,12 +1,12 @@
 ## Matlab engine and simulation
 ## Overview
 
-### This folder contains the Python controller and simulation environment for interfacing with Matlab simulations. It is designed to provide a seamless integration between Python and Matlab, enabling complex simulations to be controlled and manipulated programmatically.
+**This folder contains the Python controller for interfacing with Matlab simulations. It is designed to provide a seamless integration between Python and Matlab, enabling complex simulations to be controlled and manipulated programmatically at <ins>Runtime</ins>.**
 
-## Matlab engine (`mat_engine.py`)
+## Matlab engine ([`mat_engine.py`](Matlab2Py/mat_engine.py))
 `mat_engine.py` is a Python controller. It acts as a bridge between the Python environment and the Matlab simulation, allowing for the execution of Matlab scripts and the retrieval of simulation data directly from Python.
 
-## Maze Environment (`maze_env.py`)
+## Maze Environment ([`mat_env.py`](Matlab2Py/mat_env.py))
 
 `maze_env.py` is a custom Gym environment wrapper for the Matlab simulation. It provides an interface for reinforcement learning algorithms to interact with the simulation, enabling the training of agents to navigate through a maze.
 
