@@ -2,3 +2,4 @@ torch
 gym
 numpy
 matplotlib
+keyboard

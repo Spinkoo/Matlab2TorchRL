@@ -1,8 +1,8 @@
 import gym
 from gym import spaces
 import numpy as np
-from .mat_engine import Engine
-
+from Matlab2Py.mat_engine import Engine
+import keyboard
 
 
 
@@ -203,7 +203,7 @@ class MazeMatlabEnv(gym.Env):
 
 if __name__ == '__main__':
 
-    SIMULATION_PATH = 'envs/maze/'
+    SIMULATION_PATH = 'gyms/envs/maze/'
     MODEL_PATH = f"{SIMULATION_PATH}Simulation_2_Wall_Follower_v1.slx"
     model_name = 'Simulation_2_Wall_Follower_v1'
     env = MazeMatlabEnv(display_block=['time1'], render_mode='accelerator')
@@ -218,3 +218,7 @@ if __name__ == '__main__':
         #print(action, r, done, status)
         if done:
             env.reset()
+        if keyboard.is_pressed('q'):
+            env.close()
+            print('Existing simulation')
+            exit()
