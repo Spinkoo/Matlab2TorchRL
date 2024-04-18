@@ -46,7 +46,7 @@ if __name__ == '__main__':
         #print(eng.get_ws_value())
         #Carry forward in the simulation
         if keyboard.is_pressed('q'):
-            eng.close()
+            eng.end_simulation()
             print('Existing simulation')
             exit()
 
