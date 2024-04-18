@@ -32,6 +32,9 @@ This is the Readme for a simulation of a Thymio runing through and solving mazes
 The input block is set in the workspace for a smooth and simple modification from the Python engine
 
 The assertion block is necessary to properly run step by step the simulation assuring a fixed step size when interfacing with the engine
+
+The final result of the simulation is communicated to the Python pipeline using a "To Workspace" block which can be accessed using the ```get_simulation_last_readings``` method 
+
  --------------------------------------
     ----|     Files     |----   
  --------------------------------------
@@ -78,7 +81,7 @@ ATIAS Sophian - triedge558@gmail.com
 
 CHARPENTIER Jonathan - j.the-foam@hotmail.com
 
-Modified by Wail HARROUZ
+Modified by Wail HARROUZ (Spinkoo)
 
 created  : 06 Feb 2018
 
