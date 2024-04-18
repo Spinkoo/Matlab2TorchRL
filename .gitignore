@@ -1,6 +1,10 @@
 */**/slprj
 
 *cpython*
+__pycache__/
+
 
 data.mat
 gyms/envs/maze/Simulation_2_Wall_Follower_v1.slx.autosave
+gyms/envs/maze/data.mat
+gyms/envs/maze/Simulation_2_Wall_Follower_v1.slxc
