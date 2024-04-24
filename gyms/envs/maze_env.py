@@ -1,7 +1,10 @@
 import gym
 from gym import spaces
 import numpy as np
-from Matlab2Py.mat_engine import Engine
+try:
+    from Matlab2Py.online_matlab import OnlineEngine
+except:
+    from gyms.envs.Matlab2Py.online_matlab import OnlineEngine
 import keyboard
 
 
@@ -52,7 +55,7 @@ class MazeMatlabEnv(gym.Env):
 
     def init_matlab_engine(self, model_path, simulation_path, model_name, simulation_type = 'sparsesbs', init_script = 'setup', max_iter = 20000):
 
-        self.eng = Engine(model_path = model_path, sim_path = simulation_path, model_name = model_name, simulation_type=simulation_type)
+        self.eng = OnlineEngine(model_path = model_path, sim_path = simulation_path, model_name = model_name, simulation_type=simulation_type)
         self.eng.load_engine()
         self.eng.run_engine_script(init_script)
         self.eng.set_simulation_mode(self.render_mode)
@@ -64,8 +67,12 @@ class MazeMatlabEnv(gym.Env):
     def extract_values(self):
         return { k : self.eng.get_runtime_attribute(k, '') for k in self.display_blocks}
     
+    # Get robot sensors readings
+    def get_robots_readings(self, ws = 'base'):
+        return np.array(self.eng.get_simulation_last_readings('robot_readings', ws)[0], dtype=np.float16)
+    
     def _get_obs(self):
-        return self.eng.get_robots_readings()[0]
+        return self.get_robots_readings()[0]
 
     def _get_info(self):
         return {

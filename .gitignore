@@ -5,6 +5,7 @@ __pycache__/
 
 
 data.mat
-gyms/envs/maze/Simulation_2_Wall_Follower_v1.slx.autosave
+*.autosave
 gyms/envs/maze/data.mat
-gyms/envs/maze/Simulation_2_Wall_Follower_v1.slxc
+*.slxc
+

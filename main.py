@@ -1,3 +1,4 @@
+import keyboard
 from DQN import *
 import gym
 
@@ -55,7 +56,11 @@ def main():
                 
                 net.plot(net.ax, history)
                 break
-
+            
+            if keyboard.is_pressed('q'):
+                env.close()
+                print('Existing simulation')
+                exit()
             state = next_state
 
 if __name__ == '__main__':
