@@ -1,4 +1,5 @@
-from Matlab2Py.mat_engine import Engine
+from Matlab2Py.online_matlab import OnlineEngine
+import numpy as np
 import keyboard
 
 
@@ -13,7 +14,7 @@ if __name__ == '__main__':
     SIMULATION_PATH = 'gyms/envs/maze/'
     MODEL_PATH = f"{SIMULATION_PATH}Simulation_2_Wall_Follower_v1.slx"
     model_name = 'Simulation_2_Wall_Follower_v1'
-    eng = Engine(model_path = MODEL_PATH, sim_path = SIMULATION_PATH, model_name = model_name, simulation_type='sparsesbs')
+    eng = OnlineEngine(model_path = MODEL_PATH, sim_path = SIMULATION_PATH, model_name = model_name, simulation_type='sparsesbs')
     eng.load_engine()
     eng.run_engine_script('setup')
     eng.set_simulation_mode(s_mode='Normal')
@@ -32,7 +33,7 @@ if __name__ == '__main__':
         if sim_status != 'paused' and eng.sim_type == 'sparsesbs':
             continue
 
-        print(eng.get_robots_readings())
+        print(np.array(eng.get_simulation_last_readings('robot_readings', 'base')[0], dtype=np.float16))
 
         
         
