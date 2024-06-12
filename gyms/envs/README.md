@@ -12,7 +12,7 @@
 
 `maze_env.py` is a custom Gym environment wrapper for the Matlab simulation. It provides an interface for reinforcement learning algorithms to interact with the simulation, enabling the training of agents to navigate through a maze.
 
-<p align="center"><img src="../../images/OpenAi-gym.png"></p>
+<p align="center"><img src="../../images/openaiGYM.png"></p>
 
 ### Key Features
 

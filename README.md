@@ -20,7 +20,7 @@ What things you need to install the software and how to install them:
 
 ### Installing
 
-1. Clone the repo
+1. Clone the repo : `git clone --recursive https://github.com/Spinkoo/Matlab2TorchRL` (to get the Matlab2Py submodule)
 2. Navigate to the project directory
 3. Install requirements.txt `pip install -r requirements.txt`
 4. [Install Matlab engine for Python](https://fr.mathworks.com/help/matlab/matlab_external/get-started-with-matlab-engine-for-python.html)
